@@ -36,7 +36,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     };
     
     try {
-        const response = await fetch('/register', {
+        const response = await fetch('https://vehicle-registration-hashing-system.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
     const regNumber = document.getElementById('searchRegNumber').value;
     
     try {
-        const response = await fetch('/search', {
+        const response = await fetch('https://vehicle-registration-hashing-system.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ document.getElementById('deleteForm').addEventListener('submit', async (e) => {
     }
     
     try {
-        const response = await fetch('/delete', {
+        const response = await fetch('https://vehicle-registration-hashing-system.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ document.getElementById('deleteForm').addEventListener('submit', async (e) => {
 // Load all vehicles
 async function loadAllVehicles() {
     try {
-        const response = await fetch('/all_vehicles');
+        const response = await fetch('https://vehicle-registration-hashing-system.onrender.com');
         const result = await response.json();
         const allVehiclesDiv = document.getElementById('allVehicles');
         
